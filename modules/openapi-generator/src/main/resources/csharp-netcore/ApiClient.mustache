@@ -112,10 +112,10 @@ namespace {{packageName}}.Client
                 return DateTime.Parse(response.Content, null, System.Globalization.DateTimeStyles.RoundtripKind);
             }
 
-            if (type == typeof(String) || type.Name.StartsWith("System.Nullable")) // return primitive type
-            {
-                return Convert.ChangeType(response.Content, type);
-            }
+            //if (type == typeof(String) || type.Name.StartsWith("System.Nullable")) // return primitive type
+            //{
+            //    return Convert.ChangeType(response.Content, type);
+            //}
 
             // at this point, it must be a model (json)
             try

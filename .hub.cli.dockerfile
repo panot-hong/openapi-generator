@@ -25,7 +25,7 @@ WORKDIR ${GEN_DIR}/modules/openapi-generator-cli/target
 
 COPY --from=builder ${GEN_DIR}/modules/openapi-generator-cli/target/openapi-generator-cli.jar ${GEN_DIR}/modules/openapi-generator-cli/target/openapi-generator-cli.jar
 
-COPY docker-entrypoint.sh /usr/local/bin/
+COPY ./docker-entrypoint.sh /usr/local/bin/
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 
